@@ -9,7 +9,11 @@
 function mapPromise(promise, transformer) {
   return new Promise((resolve, reject) => {
     /* IMPLEMENT ME!! */
-    promise.then((val) => resolve(transformer(val))).catch(reject);
+    promise
+      .then((val) => resolve(transformer(val)))
+      .catch((err) => {
+        reject(err);
+      });
   });
 }
 
@@ -38,13 +42,9 @@ function squarePromise(numberPromise) {
  */
 function squarePromiseOrZero(promise) {
   return squarePromise(promise).catch((err) => {
-    // if (isNaN(err) > 0) {
-    //   return 0;
-    // } else if (err) {
-    //   return 0;
-    // }
-    err = 0;
-    return err;
+    if (err) {
+      return 0;
+    }
   });
 }
 
