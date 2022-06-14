@@ -2,15 +2,15 @@ const promiseGenerator = require('./promise-generator');
 const returnPromise = promiseGenerator.returnPromise;
 
 const promise = returnPromise('first promise', 3338);
-console.log('promise:', promise);
+// console.log('promise:', promise);
 
 console.log('first');
 
 // Not the best way to do this
 
-// setTimeout(()=>{
-//   console.log('promise 6 seconds later:',promise);
-// },6000);
+// setTimeout(() => {
+//   console.log('promise 6 seconds later:', promise);
+// }, 6000);
 
 //
 // The RIGHT way to do this
