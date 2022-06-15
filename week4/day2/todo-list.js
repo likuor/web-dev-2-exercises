@@ -10,7 +10,7 @@ function newTask(title, description) {
     description: description,
     completed: false,
     markCompleted: function () {
-      return (taskObj.completed = true);
+      taskObj.completed = true;
     },
     logState: function () {
       return console.log(
@@ -18,7 +18,6 @@ function newTask(title, description) {
       );
     },
   };
-
   return taskObj;
 }
 
@@ -28,7 +27,6 @@ const task1 = newTask(
 );
 const task2 = newTask('Do Laundry', '😨');
 const tasks = [task1, task2];
-console.log(tasks);
 
 task1.logState(); // Clean Cat Litter has not been completed
 task1.markCompleted();
