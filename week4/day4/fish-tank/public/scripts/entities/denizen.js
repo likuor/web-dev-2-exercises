@@ -1,5 +1,4 @@
 class Denizen {
-
   constructor(options) {
     // console.log("constructing:", this.constructor.name, options);
     this.lastTime = new Date();
@@ -36,7 +35,7 @@ class Denizen {
   }
 
   updateOneTick() {
-    throw "not implemented";
+    throw 'not implemented';
   }
 
   renderRules() {
@@ -46,13 +45,13 @@ class Denizen {
         width: this.width,
         height: this.height,
       },
-      x: this.position.x - Math.floor(this.width/2),
-      y: this.position.y - Math.floor(this.height/2),
+      x: this.position.x - Math.floor(this.width / 2),
+      y: this.position.y - Math.floor(this.height / 2),
     };
   }
 
   onClick(event) {
-    throw "not implemented";
+    throw 'not implemented';
   }
 
   kill(duration) {

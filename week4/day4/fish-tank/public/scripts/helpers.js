@@ -1,4 +1,3 @@
-
 function randRange(min, max) {
   var interval = max - min;
   return Math.random() * interval + min;
@@ -12,9 +11,8 @@ function randRangeInt(min, max) {
   return Math.floor(randRange(min, max + 0.99999));
 }
 
-
 class Vector {
-  constructor (x, y) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
   }
@@ -56,7 +54,7 @@ class Vector {
     return this.distance(new Vector(0, 0));
   }
 
-/*  normalize_mut(target_magnitude) {
+  /*  normalize_mut(target_magnitude) {
     if (target_magnitude < 0.00001) {
       this.x = this.y = 0;
     }
@@ -64,4 +62,3 @@ class Vector {
     this.scale_mut(scale_factor);
   }*/
 }
-
